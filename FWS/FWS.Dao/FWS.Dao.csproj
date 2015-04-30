@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A7C60EA-0E0A-4983-881E-2066D4A21D5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FWS.Dao</RootNamespace>
+    <AssemblyName>FWS.Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FWS.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FWS.Web\Bin\FWS.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\FwsCrewContext.cs" />
+    <Compile Include="Context\FwsVolcanoContext.cs" />
+    <Compile Include="Context\InitializetDataBase.cs" />
+    <Compile Include="Crew\dUserInfo.cs" />
+    <Compile Include="dBase.cs" />
+    <Compile Include="Migrations\Migrations_FwsCrew\201502280056122_FWSCrew.cs" />
+    <Compile Include="Migrations\Migrations_FwsCrew\201502280056122_FWSCrew.Designer.cs">
+      <DependentUpon>201502280056122_FWSCrew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Migrations_FwsCrew\ConfigurationFwsCrew.cs" />
+    <Compile Include="Migrations\Migrations_FWSVolcano\201502280057009_FWSVolcano.cs" />
+    <Compile Include="Migrations\Migrations_FWSVolcano\201502280057009_FWSVolcano.Designer.cs">
+      <DependentUpon>201502280057009_FWSVolcano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Migrations_FWSVolcano\ConfigurationFWSVolcano.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Volcano\dLancamentoGrupo.cs" />
+    <Compile Include="Volcano\dLancamentoTipo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\DBCreate.sql" />
+    <Content Include="_Config.txt" />
+    <Content Include="_Scripts.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FWS.Con\FWS.Con.csproj">
+      <Project>{8bf82114-ef73-47c3-a690-33caff637acd}</Project>
+      <Name>FWS.Con</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Dic\FWS.Dic.csproj">
+      <Project>{6bd20946-2c2f-4a3a-b9e2-70c425b8b274}</Project>
+      <Name>FWS.Dic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Ent\FWS.Ent.csproj">
+      <Project>{49C52ECD-FD66-4343-869A-B4982B7F642A}</Project>
+      <Name>FWS.Ent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Hlp\FWS.Hlp.csproj">
+      <Project>{7a2e2ce5-0f46-487d-b254-b4b7d049c990}</Project>
+      <Name>FWS.Hlp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Log\FWS.Log.csproj">
+      <Project>{71ff510a-49fb-43dd-9faf-7ea8f9f126fe}</Project>
+      <Name>FWS.Log</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\Migrations_FwsCrew\201502280056122_FWSCrew.resx">
+      <DependentUpon>201502280056122_FWSCrew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Migrations_FWSVolcano\201502280057009_FWSVolcano.resx">
+      <DependentUpon>201502280057009_FWSVolcano.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

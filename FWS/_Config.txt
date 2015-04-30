@@ -1,0 +1,19 @@
+  <connectionStrings>
+    <!--Arquivo de Log-->
+    <add name="FWSBusted" connectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\FWSBusted.mdf;Initial Catalog=FWSBusted;Integrated Security=True" providerName="System.Data.SqlClient" />
+    <!--Membership-->
+    <add name="FWSCrew" connectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\FWSCrew.mdf;Initial Catalog=FWSCrew;Integrated Security=True" providerName="System.Data.SqlClient" />
+    <!--Tripulação-->
+    <add name="FWSMist" connectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\FWSMist.mdf;Initial Catalog=FWSMist;Integrated Security=True" providerName="System.Data.SqlClient" />
+    <!--Financeira-->
+    <add name="FWSVolcano" connectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\FWSVolcano.mdf;Initial Catalog=FWSVolcano;Integrated Security=True" providerName="System.Data.SqlClient" />
+    <!--A Definir-->
+    <add name="FWSThunderstorm" connectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\FWSThunderstorm.mdf;Initial Catalog=FWSThunderstorm;Integrated Security=True" providerName="System.Data.SqlClient" />
+    <!--A Definir-->
+    <add name="FWSBlizzard" connectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\FWSBlizzard.mdf;Initial Catalog=FWSBlizzard;Integrated Security=True" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <logSection>
+    <logType Provider="All"/>
+    <connectionString Name="FWSBusted"/>
+    <textFile Path="" Name="FWSBusted" MaxByte="15"/>
+  </logSection>

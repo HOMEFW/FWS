@@ -1,0 +1,48 @@
+﻿
+
+1 - Create Migrations
+
+1.1 Criar as views e Annotations das Tabelas
+1.2 Criar as models referenciando as views 
+1.3 Criar os contextos desejados. FWS e LOG para criar as tabelas
+1.4 Habilitar a migração
+1.5 Renomear o arquivo configuration para  ConfigurationFwsCrew ou ConfigurationFwsVolcano  etc
+--  aspNetMembreShip Não precisa Criar contexto view ou models (FwsCrewContext <= AplicationDbContext) 
+--  tb não precisa utilizar o migration
+--  Enable-migrations -EnableAutomaticMigration -ContextTypeName FwsCrewContext -MigrationsDirectory:Migrations\Migrations_FwsCrewContext -force
+1.6 Adicionar as tabelas e campos no script
+
+
+Enable-Migrations  -EnableAutomaticMigrations -ContextTypeName FwsCrewContext  -MigrationsDirectory Migrations\Migrations_FwsCrew  -ProjectName FWS.Dao -StartUpProjectName FWS.Web  -ContextProjectName FWS.Dao -Force
+Enable-Migrations  -EnableAutomaticMigrations -ContextTypeName FwsVolcanoContext  -MigrationsDirectory Migrations\Migrations_FWSVolcano  -ProjectName FWS.Dao -StartUpProjectName FWS.Web  -ContextProjectName FWS.Dao -Force
+
+Add-Migration FWSCrew -Force -ProjectName FWS.Dao -StartUpProjectName FWS.Web -ConfigurationTypeName ConfigurationFwsCrew  -ConnectionStringName FWSCrew 
+Add-Migration FWSVolcano -Force -ProjectName FWS.Dao -StartUpProjectName FWS.Web -ConfigurationTypeName ConfigurationFWSVolcano  -ConnectionStringName FWSVolcano 
+
+Update-Database -Force -ProjectName FWS.Dao -StartUpProjectName FWS.Web -ConfigurationTypeName ConfigurationFwsCrew  -ConnectionStringName FWSCrew 
+Update-Database -Force -ProjectName FWS.Dao -StartUpProjectName FWS.Web -ConfigurationTypeName ConfigurationFWSVolcano  -ConnectionStringName FWSVolcano 
+
+
+
+
+
+
+
+
+
+
+
+-- Commands
+Enable-Migrations  -EnableAutomaticMigrations -ContextTypeName  FwsCrewContext
+  -MigrationsDirectory Migrations\Migrations_FwsCrewContext  -ProjectName FWSCREW.Dao -StartUpProjectName FWS.Web
+  -ContextProjectName FWS.Dao  [-ConnectionStringName <String>] [-Force] 
+  [-ContextAssemblyName <String>] [-AppDomainBaseDirectory <String>] [<CommonParameters>]
+
+Add-Migration [-Name] <String> [-Force] [-ProjectName <String>] [-StartUpProjectName <String>] 
+  [-ConfigurationTypeName <String>] [-ConnectionStringName <String>] [-IgnoreChanges] 
+  [-AppDomainBaseDirectory <String>] [<CommonParameters>]
+
+
+Update-Database [-SourceMigration <String>] [-TargetMigration <String>] [-Script] [-Force] 
+  [-ProjectName <String>] [-StartUpProjectName <String>] [-ConfigurationTypeName <String>] 
+  [-ConnectionStringName <String>] [-AppDomainBaseDirectory <String>] [<CommonParameters>]

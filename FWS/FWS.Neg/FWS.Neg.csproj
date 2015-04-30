@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C92BFC70-E302-4D85-8152-48598DDB8515}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FWS.Neg</RootNamespace>
+    <AssemblyName>FWS.Neg</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crew\nUserInfo.cs" />
+    <Compile Include="nBase.cs" />
+    <Compile Include="StartUpProject.cs" />
+    <Compile Include="User\Interfaces\iInteresse.cs" />
+    <Compile Include="User\Interfaces\iPessoa.cs" />
+    <Compile Include="User\Interfaces\iPessoaConvite.cs" />
+    <Compile Include="User\Interfaces\iPessoaEmail.cs" />
+    <Compile Include="User\Interfaces\iPessoaInteresse.cs" />
+    <Compile Include="User\Interfaces\iPessoaPhone.cs" />
+    <Compile Include="User\Interfaces\iTipoInteresse.cs" />
+    <Compile Include="User\Classes\nInteresse.cs" />
+    <Compile Include="User\Classes\nPessoa.cs" />
+    <Compile Include="User\Classes\nPessoaConvite.cs" />
+    <Compile Include="User\Classes\nPessoaEmail.cs" />
+    <Compile Include="User\Classes\nPessoaInteresse.cs" />
+    <Compile Include="User\Classes\nPessoaPhone.cs" />
+    <Compile Include="User\Classes\nTipoInteresse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Volcano\nLancamentoGrupo.cs" />
+    <Compile Include="Volcano\nLancamentoTipo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FWS.Dao\FWS.Dao.csproj">
+      <Project>{8a7c60ea-0e0a-4983-881e-2066d4a21d5b}</Project>
+      <Name>FWS.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Dic\FWS.Dic.csproj">
+      <Project>{6bd20946-2c2f-4a3a-b9e2-70c425b8b274}</Project>
+      <Name>FWS.Dic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Ent\FWS.Ent.csproj">
+      <Project>{49C52ECD-FD66-4343-869A-B4982B7F642A}</Project>
+      <Name>FWS.Ent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Hlp\FWS.Hlp.csproj">
+      <Project>{7a2e2ce5-0f46-487d-b254-b4b7d049c990}</Project>
+      <Name>FWS.Hlp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Log\FWS.Log.csproj">
+      <Project>{71ff510a-49fb-43dd-9faf-7ea8f9f126fe}</Project>
+      <Name>FWS.Log</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
