@@ -55,7 +55,7 @@ namespace FWS.Dao.Context
         {
             const string name = "Administrator";
             const string email = "araujo.wg@hotmail.com";
-            const string password = "1FTM@wgnr2";
+            const string password = "1testes@";
             const string role = "Admin";
 
             var context =  new FwsCrewContext();

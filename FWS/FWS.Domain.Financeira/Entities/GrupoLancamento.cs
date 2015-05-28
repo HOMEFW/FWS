@@ -11,11 +11,5 @@ namespace FWS.Domain.Financeira.Entities
         public string Sigla { get; set; }
 
         public Int16 Tipo { get; set; }
-
-
-        public Int16 Tipo1 { get; set; }
-
-
     }
-
 }
