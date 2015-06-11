@@ -71,6 +71,12 @@ namespace FWS.Neg
         {
             dao.Dispose();
         }
+
+
+        public IQueryable<E> ListarRegistrosComFiltro(string palavra)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     //public interface INegBase<E> : IDisposable

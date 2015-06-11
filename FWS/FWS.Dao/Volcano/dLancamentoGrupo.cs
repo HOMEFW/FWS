@@ -9,5 +9,10 @@ namespace FWS.Dao.Volcano
             : base()
         {
         }
+
+        public override System.Linq.IQueryable<eLancamentoGrupo> ListarRegistrosComFiltro(eLancamentoGrupo filtro)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace FWS.Neg.Volcano
     {
         public nLancamentoTipo() : base()
         {
-           dao = new dLancamentoTipo();
+           dao = new DLancamentoTipo();
         }
     }
 }

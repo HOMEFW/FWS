@@ -37,97 +37,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N-Tier App", "N-Tier App", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.MVC", "FWS.MVC\FWS.MVC.csproj", "{0F80C919-6F1F-4F55-8FCB-AC433568DE88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.Application", "FWS.Application\FWS.Application.csproj", "{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.Domain", "FWS.Domain\FWS.Domain.csproj", "{C760BAAF-E444-476C-BA80-C291E19425B2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.Infra.Data", "FWS.Infra.Data\FWS.Infra.Data.csproj", "{F75AD5AB-1625-43AB-8853-9ACC40D207D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.IoC", "FWS.IoC\FWS.IoC.csproj", "{58DD7EE6-BF5F-420C-AAB1-E467CFC85566}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.Identity", "FWS.Identity\FWS.Identity.csproj", "{23B9E80B-204E-4BFD-9514-3745A7117266}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.App.Financeira", "FWS.App.Financeira\FWS.App.Financeira.csproj", "{D9909294-61E3-455C-855E-6AE0AE8CA1AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.Application", "FWS.Application\FWS.Application.csproj", "{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.Domain.Financeira", "FWS.Domain.Financeira\FWS.Domain.Financeira.csproj", "{09F27826-CD09-4BBA-A14C-1FAEEFC4597D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.Infra.Data.Financeira", "FWS.Infra.Data.Financeira\FWS.Infra.Data.Financeira.csproj", "{651241D2-F557-4F66-9640-FCA2702AE279}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FWS.Data", "FWS.Data\FWS.Data.csproj", "{3B15B27E-6DE3-4FDF-AD2F-0DE52C530EFB}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 18
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://araujo-wg.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = FWS.App.Financeira\\FWS.App.Financeira.csproj
-		SccProjectTopLevelParentUniqueName1 = FWS.sln
-		SccProjectName1 = FWS.App.Financeira
-		SccLocalPath1 = FWS.App.Financeira
-		SccProjectUniqueName2 = FWS.Application\\FWS.Application.csproj
-		SccProjectTopLevelParentUniqueName2 = FWS.sln
-		SccProjectName2 = FWS.Application
-		SccLocalPath2 = FWS.Application
-		SccProjectUniqueName3 = FWS.Con\\FWS.Con.csproj
-		SccProjectTopLevelParentUniqueName3 = FWS.sln
-		SccProjectName3 = FWS.Con
-		SccLocalPath3 = FWS.Con
-		SccProjectUniqueName4 = FWS.Dao\\FWS.Dao.csproj
-		SccProjectTopLevelParentUniqueName4 = FWS.sln
-		SccProjectName4 = FWS.Dao
-		SccLocalPath4 = FWS.Dao
-		SccProjectUniqueName5 = FWS.Dic\\FWS.Dic.csproj
-		SccProjectTopLevelParentUniqueName5 = FWS.sln
-		SccProjectName5 = FWS.Dic
-		SccLocalPath5 = FWS.Dic
-		SccProjectUniqueName6 = FWS.Domain.Financeira\\FWS.Domain.Financeira.csproj
-		SccProjectTopLevelParentUniqueName6 = FWS.sln
-		SccProjectName6 = FWS.Domain.Financeira
-		SccLocalPath6 = FWS.Domain.Financeira
-		SccProjectUniqueName7 = FWS.Domain\\FWS.Domain.csproj
-		SccProjectTopLevelParentUniqueName7 = FWS.sln
-		SccProjectName7 = FWS.Domain
-		SccLocalPath7 = FWS.Domain
-		SccProjectUniqueName8 = FWS.Ent\\FWS.Ent.csproj
-		SccProjectTopLevelParentUniqueName8 = FWS.sln
-		SccProjectName8 = FWS.Ent
-		SccLocalPath8 = FWS.Ent
-		SccProjectUniqueName9 = FWS.Hlp\\FWS.Hlp.csproj
-		SccProjectTopLevelParentUniqueName9 = FWS.sln
-		SccProjectName9 = FWS.Hlp
-		SccLocalPath9 = FWS.Hlp
-		SccProjectUniqueName10 = FWS.Identity\\FWS.Identity.csproj
-		SccProjectTopLevelParentUniqueName10 = FWS.sln
-		SccProjectName10 = FWS.Identity
-		SccLocalPath10 = FWS.Identity
-		SccProjectUniqueName11 = FWS.Infra.Data.Financeira\\FWS.Infra.Data.Financeira.csproj
-		SccProjectTopLevelParentUniqueName11 = FWS.sln
-		SccProjectName11 = FWS.Infra.Data.Financeira
-		SccLocalPath11 = FWS.Infra.Data.Financeira
-		SccProjectUniqueName12 = FWS.Infra.Data\\FWS.Infra.Data.csproj
-		SccProjectTopLevelParentUniqueName12 = FWS.sln
-		SccProjectName12 = FWS.Infra.Data
-		SccLocalPath12 = FWS.Infra.Data
-		SccProjectUniqueName13 = FWS.IoC\\FWS.IoC.csproj
-		SccProjectTopLevelParentUniqueName13 = FWS.sln
-		SccProjectName13 = FWS.IoC
-		SccLocalPath13 = FWS.IoC
-		SccProjectUniqueName14 = FWS.Log\\FWS.Log.csproj
-		SccProjectTopLevelParentUniqueName14 = FWS.sln
-		SccProjectName14 = FWS.Log
-		SccLocalPath14 = FWS.Log
-		SccProjectUniqueName15 = FWS.MVC\\FWS.MVC.csproj
-		SccProjectTopLevelParentUniqueName15 = FWS.sln
-		SccProjectName15 = FWS.MVC
-		SccLocalPath15 = FWS.MVC
-		SccProjectUniqueName16 = FWS.Neg\\FWS.Neg.csproj
-		SccProjectTopLevelParentUniqueName16 = FWS.sln
-		SccProjectName16 = FWS.Neg
-		SccLocalPath16 = FWS.Neg
-		SccProjectUniqueName17 = FWS.Web\\FWS.Web.csproj
-		SccProjectTopLevelParentUniqueName17 = FWS.sln
-		SccProjectName17 = FWS.Web
-		SccLocalPath17 = FWS.Web
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -169,18 +89,10 @@ Global
 		{0F80C919-6F1F-4F55-8FCB-AC433568DE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F80C919-6F1F-4F55-8FCB-AC433568DE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F80C919-6F1F-4F55-8FCB-AC433568DE88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C760BAAF-E444-476C-BA80-C291E19425B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C760BAAF-E444-476C-BA80-C291E19425B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C760BAAF-E444-476C-BA80-C291E19425B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C760BAAF-E444-476C-BA80-C291E19425B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F75AD5AB-1625-43AB-8853-9ACC40D207D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F75AD5AB-1625-43AB-8853-9ACC40D207D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F75AD5AB-1625-43AB-8853-9ACC40D207D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F75AD5AB-1625-43AB-8853-9ACC40D207D7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58DD7EE6-BF5F-420C-AAB1-E467CFC85566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58DD7EE6-BF5F-420C-AAB1-E467CFC85566}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58DD7EE6-BF5F-420C-AAB1-E467CFC85566}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -189,18 +101,14 @@ Global
 		{23B9E80B-204E-4BFD-9514-3745A7117266}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23B9E80B-204E-4BFD-9514-3745A7117266}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23B9E80B-204E-4BFD-9514-3745A7117266}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D9909294-61E3-455C-855E-6AE0AE8CA1AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9909294-61E3-455C-855E-6AE0AE8CA1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9909294-61E3-455C-855E-6AE0AE8CA1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9909294-61E3-455C-855E-6AE0AE8CA1AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09F27826-CD09-4BBA-A14C-1FAEEFC4597D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09F27826-CD09-4BBA-A14C-1FAEEFC4597D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09F27826-CD09-4BBA-A14C-1FAEEFC4597D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09F27826-CD09-4BBA-A14C-1FAEEFC4597D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{651241D2-F557-4F66-9640-FCA2702AE279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{651241D2-F557-4F66-9640-FCA2702AE279}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{651241D2-F557-4F66-9640-FCA2702AE279}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{651241D2-F557-4F66-9640-FCA2702AE279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B15B27E-6DE3-4FDF-AD2F-0DE52C530EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B15B27E-6DE3-4FDF-AD2F-0DE52C530EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B15B27E-6DE3-4FDF-AD2F-0DE52C530EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B15B27E-6DE3-4FDF-AD2F-0DE52C530EFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -217,13 +125,10 @@ Global
 		{C42956FE-35F6-4492-BDC7-70A42BD83574} = {6957506D-FB3C-445E-B179-F1D7EFB36431}
 		{3A6486EC-182C-4574-9A51-11452F3871AA} = {6957506D-FB3C-445E-B179-F1D7EFB36431}
 		{0F80C919-6F1F-4F55-8FCB-AC433568DE88} = {C7F54561-5B58-4F91-B790-F05C0415229F}
-		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D} = {B452A08E-549C-4E24-A1D1-F1B466104DA4}
 		{C760BAAF-E444-476C-BA80-C291E19425B2} = {9B75CE73-4457-4B3F-B4C3-1C513BFD4089}
-		{F75AD5AB-1625-43AB-8853-9ACC40D207D7} = {C42956FE-35F6-4492-BDC7-70A42BD83574}
 		{58DD7EE6-BF5F-420C-AAB1-E467CFC85566} = {3A6486EC-182C-4574-9A51-11452F3871AA}
 		{23B9E80B-204E-4BFD-9514-3745A7117266} = {3A6486EC-182C-4574-9A51-11452F3871AA}
-		{D9909294-61E3-455C-855E-6AE0AE8CA1AA} = {B452A08E-549C-4E24-A1D1-F1B466104DA4}
-		{09F27826-CD09-4BBA-A14C-1FAEEFC4597D} = {9B75CE73-4457-4B3F-B4C3-1C513BFD4089}
-		{651241D2-F557-4F66-9640-FCA2702AE279} = {C42956FE-35F6-4492-BDC7-70A42BD83574}
+		{9E455A4D-05DC-4E6C-A17A-EAC1D7CA128D} = {B452A08E-549C-4E24-A1D1-F1B466104DA4}
+		{3B15B27E-6DE3-4FDF-AD2F-0DE52C530EFB} = {C42956FE-35F6-4492-BDC7-70A42BD83574}
 	EndGlobalSection
 EndGlobal

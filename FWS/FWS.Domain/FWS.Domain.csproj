@@ -43,11 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Comum\eDominio.cs" />
+    <Compile Include="Entities\Financeira\eGrupoLancamento.cs" />
+    <Compile Include="Entities\Financeira\eLancamento.cs" />
+    <Compile Include="Entities\Financeira\eTipoLancamento.cs" />
+    <Compile Include="Interfaces\Repositories\Comum\IDominioRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Financeira\IGrupoLancamentoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Financeira\ILancamentoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\Financeira\ITipoLancamentoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="Entities\Pessoal\" />
+    <Folder Include="Interfaces\Repositories\Pessoal\" />
     <Folder Include="Interfaces\Services\" />
     <Folder Include="Services\" />
   </ItemGroup>

@@ -3,8 +3,12 @@ using FWS.Ent.Volcano;
 
 namespace FWS.Dao.Volcano
 {
-    public class dLancamentoTipo: dBaseGen<eLancamentoTipo, FwsVolcanoContext>
+    public class DLancamentoTipo: dBaseGen<eLancamentoTipo, FwsVolcanoContext>
     {
+        public override System.Linq.IQueryable<eLancamentoTipo> ListarRegistrosComFiltro(eLancamentoTipo filtro)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
                                                                                                                                                                                         
