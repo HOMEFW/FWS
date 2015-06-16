@@ -1,4 +1,6 @@
-﻿using FWS.Dao.Context;
+﻿using System;
+using System.Linq;
+using FWS.Dao.Context;
 using FWS.Ent.Volcano;
 
 namespace FWS.Dao.Volcano
@@ -10,9 +12,9 @@ namespace FWS.Dao.Volcano
         {
         }
 
-        public override System.Linq.IQueryable<eLancamentoGrupo> ListarRegistrosComFiltro(eLancamentoGrupo filtro)
+        public override IQueryable<eLancamentoGrupo> ListarRegistrosComFiltro(eLancamentoGrupo filtro)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

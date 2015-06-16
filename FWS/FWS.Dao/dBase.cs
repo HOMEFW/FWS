@@ -69,7 +69,7 @@ namespace FWS.Dao
             }
             catch (Exception ex)
             {
-                appLog.LogMe(erro.Critical, ex, this.GetType(), "");
+                appLog.LogMe(erro.Critical, ex, GetType(), "");
                 return hRetorno.Retorno(false, ex);
             }
         }
@@ -84,7 +84,7 @@ namespace FWS.Dao
             }
             catch (Exception ex)
             {
-                appLog.LogMe(erro.Critical, ex, this.GetType(), "");
+                appLog.LogMe(erro.Critical, ex, GetType(), "");
                 return hRetorno.Retorno(false, ex);
             }
         }
@@ -100,7 +100,7 @@ namespace FWS.Dao
             }
             catch (Exception ex)
             {
-                appLog.LogMe(erro.Critical, ex, this.GetType(), "");
+                appLog.LogMe(erro.Critical, ex, GetType(), "");
                 return hRetorno.Retorno(false, ex);
             }
         }

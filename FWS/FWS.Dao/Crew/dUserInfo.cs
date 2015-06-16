@@ -36,7 +36,7 @@ namespace FWS.Dao.Crew
             }
             catch (Exception ex)
             {
-                appLog.LogMe(erro.Critical, ex, this.GetType(), "");
+                appLog.LogMe(erro.Critical, ex, GetType(), "");
                 throw;
             }
         }

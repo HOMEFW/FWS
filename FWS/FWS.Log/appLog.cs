@@ -1,4 +1,5 @@
 using System;
+using System.Configuration;
 using FWS.Log.Dic;
 using FWS.Log.Ent;
 using FWS.Log.Neg;
@@ -32,7 +33,7 @@ namespace FWS.Log
 
         private static void Initialize()
         {
-            var config = (logSection) System.Configuration.ConfigurationManager.GetSection("logSection");
+            var config = (logSection) ConfigurationManager.GetSection("logSection");
 
 
             if (config == null)

@@ -52,13 +52,17 @@
     <Compile Include="Interfaces\Repositories\Financeira\ILancamentoRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
     <Compile Include="Interfaces\Repositories\Financeira\ITipoLancamentoRepository.cs" />
+    <Compile Include="Interfaces\Services\Comum\IDominioService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Comum\DominioService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\Pessoal\" />
     <Folder Include="Interfaces\Repositories\Pessoal\" />
-    <Folder Include="Interfaces\Services\" />
-    <Folder Include="Services\" />
+    <Folder Include="Interfaces\Services\Financeira\" />
+    <Folder Include="Interfaces\Services\Pessoal\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\Comum\ComumContext.cs" />
+    <Compile Include="Context\Financeira\FinanceiraContext.cs" />
     <Compile Include="EntityConfig\Comum\DominioConfig.cs" />
     <Compile Include="EntityConfig\Finaceira\GrupoLancamentoConfig.cs" />
     <Compile Include="EntityConfig\Finaceira\LancamentoConfig.cs" />
@@ -62,7 +64,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Context\" />
+    <Folder Include="Context\Pessoal\" />
     <Folder Include="EntityConfig\Pessoal\" />
     <Folder Include="Migrations\" />
     <Folder Include="Repositories\Pessoal\" />
@@ -71,6 +73,10 @@
     <ProjectReference Include="..\FWS.Domain\FWS.Domain.csproj">
       <Project>{c760baaf-e444-476c-ba80-c291e19425b2}</Project>
       <Name>FWS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Helper\FWS.Helper.csproj">
+      <Project>{496a2062-c611-485a-b91c-524f76d46c7e}</Project>
+      <Name>FWS.Helper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

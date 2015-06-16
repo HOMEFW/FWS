@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FWS.Ent;
 using FWS.Ent.User;
 using FWS.Neg.User.Interfaces;
@@ -10,27 +11,27 @@ namespace FWS.Neg.User.Classes
 
         public eMensagem Registrar(eTipoInteresse item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public eMensagem Alterar(eTipoInteresse item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public eMensagem Excuir(eTipoInteresse item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public List<eTipoInteresse> Consultar(eTipoInteresse item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public eMensagem Habilitar(eTipoInteresse item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

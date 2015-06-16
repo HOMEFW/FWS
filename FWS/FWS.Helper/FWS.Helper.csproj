@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{496A2062-C611-485A-B91C-524F76D46C7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FWS.Helper</RootNamespace>
+    <AssemblyName>FWS.Helper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converters\ExpressoesRegulares.cs" />
+    <Compile Include="Converters\Texto.cs" />
+    <Compile Include="Converters\TratarDado.cs" />
+    <Compile Include="Converters\Validacao.cs" />
+    <Compile Include="Converters\Validar.cs" />
+    <Compile Include="Cryptography\Criptografia.cs" />
+    <Compile Include="Data\BancoDados.cs" />
+    <Compile Include="Entities\eAtributoHtml.cs" />
+    <Compile Include="Entities\eConexaoBanco.cs" />
+    <Compile Include="Entities\eEmail.cs" />
+    <Compile Include="Entities\eRetorno.cs" />
+    <Compile Include="Enumerators\BancoDados.cs" />
+    <Compile Include="Enumerators\Comum.cs" />
+    <Compile Include="Enumerators\Enumeradores.cs" />
+    <Compile Include="Enumerators\Financeira.cs" />
+    <Compile Include="Enumerators\Pessoal.cs" />
+    <Compile Include="Exceptions\Excecao.cs" />
+    <Compile Include="Files\Config.cs" />
+    <Compile Include="Functions\Calcula.cs" />
+    <Compile Include="Functions\Comparar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FWS.Dictionary\FWS.Dictionary.csproj">
+      <Project>{91ae3a2f-5882-42fc-b537-aebb06d51bae}</Project>
+      <Name>FWS.Dictionary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

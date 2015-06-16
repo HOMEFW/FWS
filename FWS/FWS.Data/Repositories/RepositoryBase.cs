@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using FWS.Domain.Interfaces.Repositories;
 
@@ -52,12 +53,12 @@ namespace FWS.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<TEntity> FindAsync(System.Threading.CancellationToken cancellationToken, params object[] keyValues)
+        public Task<TEntity> FindAsync(CancellationToken cancellationToken, params object[] keyValues)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> SaveChangesAsyn(System.Threading.CancellationToken cancellationToken, IDictionary<string, object> dictionary)
+        public Task<bool> SaveChangesAsyn(CancellationToken cancellationToken, IDictionary<string, object> dictionary)
         {
             throw new NotImplementedException();
         }
@@ -67,7 +68,7 @@ namespace FWS.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteAsync(System.Threading.CancellationToken cancellationToken, params object[] keyValues)
+        public Task<bool> DeleteAsync(CancellationToken cancellationToken, params object[] keyValues)
         {
             throw new NotImplementedException();
         }

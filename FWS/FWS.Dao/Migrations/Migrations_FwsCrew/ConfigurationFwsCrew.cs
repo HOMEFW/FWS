@@ -1,8 +1,10 @@
+using FWS.Dao.Context;
+
 namespace FWS.Dao.Migrations.Migrations_FwsCrew
 {
     using System.Data.Entity.Migrations;
 
-    public sealed class ConfigurationFwsCrew : DbMigrationsConfiguration<Context.FwsCrewContext>
+    public sealed class ConfigurationFwsCrew : DbMigrationsConfiguration<FwsCrewContext>
     {
         public ConfigurationFwsCrew()
         {
@@ -10,7 +12,7 @@ namespace FWS.Dao.Migrations.Migrations_FwsCrew
             MigrationsDirectory = @"Migrations\Migrations_FwsCrew";
         }
 
-        protected override void Seed(Context.FwsCrewContext context)
+        protected override void Seed(FwsCrewContext context)
         {
             //  This method will be called after migrating to the latest version.
 

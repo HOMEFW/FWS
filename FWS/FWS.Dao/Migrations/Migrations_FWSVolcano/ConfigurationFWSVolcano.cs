@@ -1,15 +1,17 @@
+using FWS.Dao.Context;
+
 namespace FWS.Dao.Migrations.Migrations_FWSVolcano
 {
     using System.Data.Entity.Migrations;
 
-    public sealed class ConfigurationFWSVolcano : DbMigrationsConfiguration<Context.FwsVolcanoContext>
+    public sealed class ConfigurationFWSVolcano : DbMigrationsConfiguration<FwsVolcanoContext>
     {
         public ConfigurationFWSVolcano()
         {
             AutomaticMigrationsEnabled = true;
             MigrationsDirectory = @"Migrations\Migrations_FWSVolcano";
         }
-        protected override void Seed(Context.FwsVolcanoContext context)
+        protected override void Seed(FwsVolcanoContext context)
         {
             //  This method will be called after migrating to the latest version.
 

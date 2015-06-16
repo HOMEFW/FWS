@@ -1,7 +1,8 @@
-﻿using Microsoft.Owin;
+﻿using FWS.Web;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(FWS.Web.Startup))]
+[assembly: OwinStartup(typeof(Startup))]
 namespace FWS.Web
 {
     public partial class Startup

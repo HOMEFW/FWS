@@ -11,7 +11,7 @@ namespace FWS.Dao.Context
         protected InitializetDataBase()
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<TD, TC>());
-            appLog.LogMe(erro.Warning, null, this.GetType(), "Initialize - " + typeof(TD).Name);
+            appLog.LogMe(erro.Warning, null, GetType(), "Initialize - " + typeof(TD).Name);
         }
     }
 
