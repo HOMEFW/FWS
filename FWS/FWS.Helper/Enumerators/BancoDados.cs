@@ -2,6 +2,16 @@
 {
     public class BancoDados
     {
+
+        public enum BancoConexao
+        {
+            NaoInformado = 0,
+            Fws = 1,
+            SqlDbCartoes = 2,
+            SqlPreAnalise = 3,
+            OracleGcc = 4
+        }
+
         public enum TipoBanco
         {
             NaoInformado = 0,

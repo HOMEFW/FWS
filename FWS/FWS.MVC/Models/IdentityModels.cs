@@ -20,7 +20,7 @@ namespace FWS.MVC.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("FwsCrew", throwIfV1Schema: false)
         {
         }
 

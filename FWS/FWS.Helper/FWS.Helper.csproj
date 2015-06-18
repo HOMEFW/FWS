@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -42,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\Config.cs" />
     <Compile Include="Converters\ExpressoesRegulares.cs" />
     <Compile Include="Converters\Texto.cs" />
     <Compile Include="Converters\TratarDado.cs" />
@@ -69,6 +71,9 @@
       <Project>{91ae3a2f-5882-42fc-b537-aebb06d51bae}</Project>
       <Name>FWS.Dictionary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
