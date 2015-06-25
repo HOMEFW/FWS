@@ -602,25 +602,9 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FWS.Dic\FWS.Dic.csproj">
-      <Project>{6bd20946-2c2f-4a3a-b9e2-70c425b8b274}</Project>
-      <Name>FWS.Dic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FWS.Ent\FWS.Ent.csproj">
-      <Project>{49c52ecd-fd66-4343-869a-b4982b7f642a}</Project>
-      <Name>FWS.Ent</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FWS.Hlp\FWS.Hlp.csproj">
-      <Project>{7a2e2ce5-0f46-487d-b254-b4b7d049c990}</Project>
-      <Name>FWS.Hlp</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FWS.Log\FWS.Log.csproj">
       <Project>{71ff510a-49fb-43dd-9faf-7ea8f9f126fe}</Project>
       <Name>FWS.Log</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FWS.Neg\FWS.Neg.csproj">
-      <Project>{c92bfc70-e302-4d85-8152-48598ddb8515}</Project>
-      <Name>FWS.Neg</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

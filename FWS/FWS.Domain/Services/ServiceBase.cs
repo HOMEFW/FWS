@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using FWS.Domain.Interfaces.Repositories;
 using FWS.Domain.Interfaces.Services;
@@ -61,12 +62,12 @@ namespace FWS.Domain.Services
             return _repository.FindAsync(keyValues);
         }
 
-        public Task<TEntity> FindAsync(System.Threading.CancellationToken cancellationToken, params object[] keyValues)
+        public Task<TEntity> FindAsync(CancellationToken cancellationToken, params object[] keyValues)
         {
             return _repository.FindAsync(cancellationToken, keyValues);
         }
 
-        public Task<bool> SaveChangesAsyn(System.Threading.CancellationToken cancellationToken, IDictionary<string, object> dictionary)
+        public Task<bool> SaveChangesAsyn(CancellationToken cancellationToken, IDictionary<string, object> dictionary)
         {
             return _repository.SaveChangesAsyn(cancellationToken, dictionary);
         }
@@ -76,7 +77,7 @@ namespace FWS.Domain.Services
             return _repository.DeleteAsync(keyValues);
         }
 
-        public Task<bool> DeleteAsync(System.Threading.CancellationToken cancellationToken, params object[] keyValues)
+        public Task<bool> DeleteAsync(CancellationToken cancellationToken, params object[] keyValues)
         {
             return _repository.DeleteAsync(cancellationToken, keyValues);
         }

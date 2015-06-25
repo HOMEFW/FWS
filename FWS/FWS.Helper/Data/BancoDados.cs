@@ -104,7 +104,7 @@ namespace FWS.Helper.Data
                 if (_conexao == null || _conexao.State != ConnectionState.Open)
                 {
                     if (TipoBanco == Enumerators.BancoDados.TipoBanco.Sql)
-                        _conexao = new SqlConnection(ConexaoBanco.ConexaoSql);
+                        _conexao = new SqlConnection(ConexaoBanco.GetConexao);
                     //else if (TipoBanco == Enumeradores.TipoBanco.Oracle)
                     //    _conexao = new OracleConnection(ConexaoBanco.ConexaoOracle);
 

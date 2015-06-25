@@ -1,11 +1,11 @@
 ﻿using System;
-using FWS.MVC.Context;
+using FWS.MVC.Areas.Users.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.Google;
 using Owin;
-using ApplicationUser = FWS.MVC.Models.ApplicationUser;
 
 namespace FWS.MVC
 {
@@ -14,9 +14,21 @@ namespace FWS.MVC
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
+            //var cripto = Helper.Cryptography.Criptografia.Criptografar(((int)Helper.Enumerators.BancoDados.TipoBanco.SqlLocalDb).ToString());
+            //cripto = Helper.Cryptography.Criptografia.Criptografar("(LocalDb)\\v11.0");
+            //cripto = Helper.Cryptography.Criptografia.Criptografar("fws_desenv.mdf");
+            //cripto = Helper.Cryptography.Criptografia.Criptografar("fws_desenv");
+            //cripto = Helper.Cryptography.Criptografia.Criptografar("fwscrew");
+            //cripto = Helper.Cryptography.Criptografia.Criptografar("fwscrew");
+
+            //cripto = Helper.Cryptography.Criptografia.Criptografar(((int)Helper.Enumerators.BancoDados.TipoBanco.Sql).ToString());
+            //cripto = Helper.Cryptography.Criptografia.Criptografar(@"HOMEWF\PERSONA");
+            //cripto = Helper.Cryptography.Criptografia.Criptografar("fws_desenv");
+            //cripto = Helper.Cryptography.Criptografia.Criptografar("fwscrew");
+            //cripto = Helper.Cryptography.Criptografia.Criptografar("fwscrew");
+
             // Configure the db context, user manager and signin manager to use a single instance per request
-            //app.CreatePerOwinContext(ApplicationDbContext.Create);
-            app.CreatePerOwinContext(FwsCrewContext.Create);
+            app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
@@ -26,7 +38,7 @@ namespace FWS.MVC
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/Account/Login"),
+                LoginPath = new PathString("/Users/Account/Login"),
                 Provider = new CookieAuthenticationProvider
                 {
                     // Enables the application to validate the security stamp when the user logs in.
@@ -48,21 +60,21 @@ namespace FWS.MVC
 
             // Uncomment the following lines to enable logging in with third party login providers
             //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
+            //    clientId: "dsasd asdasdasd asd asdasd",
+            //    clientSecret: "asd asdasd asdasdasda");
 
             //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            //   consumerKey: "asd asd asd a",
+            //   consumerSecret: "a sdasd as dasd asd asd");
 
             //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            //   appId: "asd asd asd asd a",
+            //   appSecret: "as dasdasd ");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
-            //    ClientId = "",
-            //    ClientSecret = ""
+            //    ClientId = "as dasd asd a",
+            //    ClientSecret = "as das dasd asd asd as"
             //});
         }
     }

@@ -16,7 +16,8 @@
         {
             NaoInformado = 0,
             Oracle = 1,
-            Sql = 2
+            Sql = 2,
+            SqlLocalDb = 3
         }
 
         public enum TipoComando

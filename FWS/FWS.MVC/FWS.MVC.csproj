@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{393E4EC6-EB86-45A0-9913-88A02584B757}</ProjectGuid>
+    <ProjectGuid>{EAC881BA-CF50-4E4E-93D5-4C94E58059E7}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -158,33 +158,259 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Context\FwsCrewContext.cs" />
-    <Compile Include="Context\InitializetDataBase.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Areas\Users\UsersAreaRegistration.cs" />
+    <Compile Include="Areas\Users\Controllers\AccountController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Areas\Users\Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Migrations\Tables.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\UserInfoModel.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Areas\Users\Models\AccountViewModels.cs" />
+    <Compile Include="Areas\Users\Models\IdentityModels.cs" />
+    <Compile Include="Areas\Users\Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
+    <Content Include="Content\Home\css\bootstrap\bootstrap.css" />
+    <Content Include="Content\Home\css\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Home\css\compiled\calendar.css" />
+    <Content Include="Content\Home\css\compiled\theme_styles.css" />
+    <Content Include="Content\Home\css\compiled\wizard.css" />
+    <Content Include="Content\Home\css\libs\animate.css" />
+    <Content Include="Content\Home\css\libs\bootstrap-editable.css" />
+    <Content Include="Content\Home\css\libs\bootstrap-rtl.css" />
+    <Content Include="Content\Home\css\libs\bootstrap-rtl.min.css" />
+    <Content Include="Content\Home\css\libs\bootstrap-timepicker.css" />
+    <Content Include="Content\Home\css\libs\bootstrap-timepicker.min.css" />
+    <Content Include="Content\Home\css\libs\bootstrap-wizard.css" />
+    <Content Include="Content\Home\css\libs\dataTables.fixedHeader.css" />
+    <Content Include="Content\Home\css\libs\dataTables.tableTools.css" />
+    <Content Include="Content\Home\css\libs\datepicker.css" />
+    <Content Include="Content\Home\css\libs\daterangepicker.css" />
+    <Content Include="Content\Home\css\libs\dropzone.css" />
+    <Content Include="Content\Home\css\libs\font-awesome.css" />
+    <Content Include="Content\Home\css\libs\font-awesome.min.css" />
+    <Content Include="Content\Home\css\libs\footable.core.css" />
+    <Content Include="Content\Home\css\libs\footable.core.min.css" />
+    <Content Include="Content\Home\css\libs\footable.standalone.css" />
+    <Content Include="Content\Home\css\libs\footable.standalone.min.css" />
+    <Content Include="Content\Home\css\libs\fullcalendar.css" />
+    <Content Include="Content\Home\css\libs\fullcalendar.print.css" />
+    <Content Include="Content\Home\css\libs\gallery-component.css" />
+    <Content Include="Content\Home\css\libs\hopscotch.css" />
+    <Content Include="Content\Home\css\libs\jquery-jvectormap-1.1.1.css" />
+    <Content Include="Content\Home\css\libs\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Content\Home\css\libs\jquery-ui.custom_ZATIAL_SA_NEPOUZIVA.css" />
+    <Content Include="Content\Home\css\libs\jquery.nouislider.css" />
+    <Content Include="Content\Home\css\libs\jquery.nouislider.min.css" />
+    <Content Include="Content\Home\css\libs\magnific-popup.css" />
+    <Content Include="Content\Home\css\libs\morris.css" />
+    <Content Include="Content\Home\css\libs\nanoscroller.css" />
+    <Content Include="Content\Home\css\libs\nifty-component.css" />
+    <Content Include="Content\Home\css\libs\ns-default.css" />
+    <Content Include="Content\Home\css\libs\ns-style-attached.css" />
+    <Content Include="Content\Home\css\libs\ns-style-bar.css" />
+    <Content Include="Content\Home\css\libs\ns-style-growl.css" />
+    <Content Include="Content\Home\css\libs\ns-style-other.css" />
+    <Content Include="Content\Home\css\libs\ns-style-theme.css" />
+    <Content Include="Content\Home\css\libs\select2.css" />
+    <Content Include="Content\Home\css\libs\summernote.css" />
+    <Content Include="Content\Home\css\libs\summernote.min.css" />
+    <Content Include="Content\Home\css\libs\timeline.css" />
+    <Content Include="Content\Home\css\libs\weather-icons.css" />
+    <Content Include="Content\Home\css\libs\weather-icons.min.css" />
+    <Content Include="Content\Home\css\libs\xcharts.css" />
+    <Content Include="Content\Home\css\libs\xcharts.min.css" />
+    <Content Include="Content\Home\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Home\fonts\footable.svg" />
+    <Content Include="Content\Home\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Home\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Content\Home\img\clear.png" />
+    <Content Include="Content\Home\img\error-404-v2.png" />
+    <Content Include="Content\Home\img\error-404-v3.png" />
+    <Content Include="Content\Home\img\error-404.png" />
+    <Content Include="Content\Home\img\error-500-v1.png" />
+    <Content Include="Content\Home\img\error-500-v2.png" />
+    <Content Include="Content\Home\img\headline-bg.jpg" />
+    <Content Include="Content\Home\img\loading.gif" />
+    <Content Include="Content\Home\img\login-img.jpg" />
+    <Content Include="Content\Home\img\logo-black.png" />
+    <Content Include="Content\Home\img\logo-small-black.png" />
+    <Content Include="Content\Home\img\logo-small.png" />
+    <Content Include="Content\Home\img\logo.png" />
+    <Content Include="Content\Home\img\pricing-star.png" />
+    <Content Include="Content\Home\img\samples\1.jpg" />
+    <Content Include="Content\Home\img\samples\10.png" />
+    <Content Include="Content\Home\img\samples\11.png" />
+    <Content Include="Content\Home\img\samples\12.png" />
+    <Content Include="Content\Home\img\samples\13.png" />
+    <Content Include="Content\Home\img\samples\14.png" />
+    <Content Include="Content\Home\img\samples\2.jpg" />
+    <Content Include="Content\Home\img\samples\3.jpg" />
+    <Content Include="Content\Home\img\samples\4.jpg" />
+    <Content Include="Content\Home\img\samples\5.jpg" />
+    <Content Include="Content\Home\img\samples\6.jpg" />
+    <Content Include="Content\Home\img\samples\7.jpg" />
+    <Content Include="Content\Home\img\samples\8.jpg" />
+    <Content Include="Content\Home\img\samples\9.jpg" />
+    <Content Include="Content\Home\img\samples\admin-devices.png" />
+    <Content Include="Content\Home\img\samples\angelina-300.jpg" />
+    <Content Include="Content\Home\img\samples\email-sample-img-2.png" />
+    <Content Include="Content\Home\img\samples\email-sample-img.png" />
+    <Content Include="Content\Home\img\samples\email-sample-small-1.png" />
+    <Content Include="Content\Home\img\samples\email-sample-small-180-1.png" />
+    <Content Include="Content\Home\img\samples\email-sample-small-180-2.png" />
+    <Content Include="Content\Home\img\samples\email-sample-small-180-3.png" />
+    <Content Include="Content\Home\img\samples\email-sample-small-2.png" />
+    <Content Include="Content\Home\img\samples\email-sample-small-260-1.png" />
+    <Content Include="Content\Home\img\samples\email-sample-small-260-2.png" />
+    <Content Include="Content\Home\img\samples\email-sample-small-3.png" />
+    <Content Include="Content\Home\img\samples\email-template-1.png" />
+    <Content Include="Content\Home\img\samples\email-template-2.png" />
+    <Content Include="Content\Home\img\samples\email-template-3.png" />
+    <Content Include="Content\Home\img\samples\email-template-4.png" />
+    <Content Include="Content\Home\img\samples\emma-300.jpg" />
+    <Content Include="Content\Home\img\samples\emma.png" />
+    <Content Include="Content\Home\img\samples\galaxy.jpg" />
+    <Content Include="Content\Home\img\samples\george.png" />
+    <Content Include="Content\Home\img\samples\hdr\img_1.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\img_2.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\img_3.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\img_4.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\img_5.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\img_6.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\img_7.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\img_8.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\small\img_1.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\small\img_2.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\small\img_3.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\small\img_4.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\small\img_5.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\small\img_6.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\small\img_7.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\small\img_8.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\xs\img_5.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\xs\img_7.jpg" />
+    <Content Include="Content\Home\img\samples\hdr\xs\img_8.jpg" />
+    <Content Include="Content\Home\img\samples\ipad.png" />
+    <Content Include="Content\Home\img\samples\jessica.jpg" />
+    <Content Include="Content\Home\img\samples\kunis-300.jpg" />
+    <Content Include="Content\Home\img\samples\kunis.png" />
+    <Content Include="Content\Home\img\samples\lima-300.jpg" />
+    <Content Include="Content\Home\img\samples\messages-photo-1.png" />
+    <Content Include="Content\Home\img\samples\messages-photo-2.png" />
+    <Content Include="Content\Home\img\samples\messages-photo-3.png" />
+    <Content Include="Content\Home\img\samples\miranda-560-300.png" />
+    <Content Include="Content\Home\img\samples\nature.jpg" />
+    <Content Include="Content\Home\img\samples\nature2.jpg" />
+    <Content Include="Content\Home\img\samples\new-york-sunset.jpg" />
+    <Content Include="Content\Home\img\samples\profile-photo.png" />
+    <Content Include="Content\Home\img\samples\robert-300.jpg" />
+    <Content Include="Content\Home\img\samples\robert.png" />
+    <Content Include="Content\Home\img\samples\ryan-300.jpg" />
+    <Content Include="Content\Home\img\samples\ryan.png" />
+    <Content Include="Content\Home\img\samples\scarlet-159.png" />
+    <Content Include="Content\Home\img\samples\scarlet.png" />
+    <Content Include="Content\Home\img\samples\scarlett-300.jpg" />
+    <Content Include="Content\Home\img\samples\tahiti-1.jpg" />
+    <Content Include="Content\Home\img\samples\tahiti-2.jpg" />
+    <Content Include="Content\Home\img\samples\tahiti-3.jpg" />
+    <Content Include="Content\Home\img\samples\user-profile-1.png" />
+    <Content Include="Content\Home\img\samples\user1.jpg" />
+    <Content Include="Content\Home\img\select2-spinner.gif" />
+    <Content Include="Content\Home\img\select2.png" />
+    <Content Include="Content\Home\img\select2x2.png" />
+    <Content Include="Content\Home\img\sprite-green.png" />
+    <Content Include="Content\Home\img\spritemap%402x.png" />
+    <Content Include="Content\Home\img\spritemap.png" />
+    <Content Include="Content\Home\img\whitey.jpg" />
+    <Content Include="Content\Home\img\whitey_%402X.jpg" />
+    <Content Include="Content\Main\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\Main\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\Main\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\Main\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\Main\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Main\css\animate.css" />
+    <Content Include="Content\Main\css\animate.min.css" />
+    <Content Include="Content\Main\css\style-responsive.css" />
+    <Content Include="Content\Main\css\style-responsive.min.css" />
+    <Content Include="Content\Main\css\style.css" />
+    <Content Include="Content\Main\css\style.min.css" />
+    <Content Include="Content\Main\css\theme\blue.css" />
+    <Content Include="Content\Main\css\theme\default.css" />
+    <Content Include="Content\Main\css\theme\orange.css" />
+    <Content Include="Content\Main\css\theme\purple.css" />
+    <Content Include="Content\Main\css\theme\red.css" />
+    <Content Include="Content\Main\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\Main\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\Main\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Main\img\action-bg.jpg" />
+    <Content Include="Content\Main\img\carousel-1.jpg" />
+    <Content Include="Content\Main\img\carousel-2.jpg" />
+    <Content Include="Content\Main\img\carousel-3.jpg" />
+    <Content Include="Content\Main\img\client-bg.jpg" />
+    <Content Include="Content\Main\img\content-bg-cover.png" />
+    <Content Include="Content\Main\img\content-bg-cover2.png" />
+    <Content Include="Content\Main\img\home-bg.jpg" />
+    <Content Include="Content\Main\img\milestone-bg.jpg" />
+    <Content Include="Content\Main\img\quote-bg.jpg" />
+    <Content Include="Content\Main\img\quote.jpg" />
+    <Content Include="Content\Main\img\user-1.jpg" />
+    <Content Include="Content\Main\img\user-2.jpg" />
+    <Content Include="Content\Main\img\user-3.jpg" />
+    <Content Include="Content\Main\img\work-1.jpg" />
+    <Content Include="Content\Main\img\work-2.jpg" />
+    <Content Include="Content\Main\img\work-3.jpg" />
+    <Content Include="Content\Main\img\work-4.jpg" />
+    <Content Include="Content\Main\img\work-5.jpg" />
+    <Content Include="Content\Main\img\work-6.jpg" />
+    <Content Include="Content\Main\img\work-7.jpg" />
+    <Content Include="Content\Main\img\work-8.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Main\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\Main\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\Main\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Main\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Main\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Main\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\Main\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Main\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Main\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Main\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\Main\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Users\Views\web.config" />
+    <Content Include="Content\Home\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Home\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Home\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Home\fonts\FontAwesome.otf" />
+    <Content Include="Content\Home\fonts\footable.eot" />
+    <Content Include="Content\Home\fonts\footable.ttf" />
+    <Content Include="Content\Home\fonts\footable.woff" />
+    <Content Include="Content\Home\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Home\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Home\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Home\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Content\Home\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Content\Home\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Content\Home\fonts\WeatherIcons-Regular.otf" />
+    <Content Include="Content\Home\img\samples\Thumbs.db" />
+    <Content Include="Content\Home\img\Thumbs.db" />
+    <Content Include="Areas\Users\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Home\bootstrap.js" />
+    <Content Include="Scripts\Home\bootstrap.min.js" />
+    <Content Include="Scripts\Home\html5shiv.js" />
+    <Content Include="Scripts\Home\jquery.hotkeys.js" />
+    <Content Include="Scripts\Home\jquery.js" />
+    <Content Include="Scripts\Home\jquery.nanoscroller.js" />
+    <Content Include="Scripts\Home\jquery.nanoscroller.min.js" />
+    <Content Include="Scripts\Home\respond.min.js" />
+    <Content Include="Scripts\Home\scripts.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -192,10 +418,26 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Main\apps.js" />
+    <Content Include="Scripts\Main\apps.min.js" />
+    <Content Include="Scripts\Main\bootstrap\js\bootstrap.js" />
+    <Content Include="Scripts\Main\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Scripts\Main\bootstrap\js\npm.js" />
+    <Content Include="Scripts\Main\crossbrowserjs\excanvas.min.js" />
+    <Content Include="Scripts\Main\crossbrowserjs\html5shiv.js" />
+    <Content Include="Scripts\Main\crossbrowserjs\respond.min.js" />
+    <Content Include="Scripts\Main\jquery-cookie\jquery.cookie.js" />
+    <Content Include="Scripts\Main\jquery\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\Main\jquery\jquery-1.9.1.js" />
+    <Content Include="Scripts\Main\jquery\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\Main\jquery\jquery-migrate-1.1.0.js" />
+    <Content Include="Scripts\Main\jquery\jquery-migrate-1.1.0.min.js" />
+    <Content Include="Scripts\Main\pace\pace.js" />
+    <Content Include="Scripts\Main\pace\pace.min.js" />
+    <Content Include="Scripts\Main\scrollMonitor\scrollMonitor.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -207,44 +449,58 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Areas\Users\Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Areas\Users\Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Areas\Users\Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Areas\Users\Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Areas\Users\Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Areas\Users\Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Areas\Users\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Users\Views\Account\Register.cshtml" />
+    <Content Include="Areas\Users\Views\Account\ResetPassword.cshtml" />
+    <Content Include="Areas\Users\Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Areas\Users\Views\Account\SendCode.cshtml" />
+    <Content Include="Areas\Users\Views\Account\VerifyCode.cshtml" />
+    <Content Include="Areas\Users\Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Areas\Users\Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Areas\Users\Views\Manage\Index.cshtml" />
+    <Content Include="Areas\Users\Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Areas\Users\Views\Manage\SetPassword.cshtml" />
+    <Content Include="Areas\Users\Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutMain.cshtml" />
+    <Content Include="Views\Main\Home.cshtml" />
+    <Content Include="Views\Main\About.cshtml" />
+    <Content Include="Views\Main\Milestone.cshtml" />
+    <Content Include="Views\Main\Team.cshtml" />
+    <Content Include="Views\Main\Service.cshtml" />
+    <Content Include="Views\Main\Quote.cshtml" />
+    <Content Include="Views\Main\Action.cshtml" />
+    <Content Include="Views\Main\Work.cshtml" />
+    <Content Include="Views\Main\Client.cshtml" />
+    <Content Include="Views\Main\Pricing.cshtml" />
+    <Content Include="Views\Main\Contact.cshtml" />
+    <Content Include="Views\Main\Theme_panel.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Areas\Users\Views\Shared\_LayoutAccount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FWS.Helper\FWS.Helper.csproj">
       <Project>{496a2062-c611-485a-b91c-524f76d46c7e}</Project>
       <Name>FWS.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.Log\FWS.Log.csproj">
+      <Project>{71ff510a-49fb-43dd-9faf-7ea8f9f126fe}</Project>
+      <Name>FWS.Log</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -263,7 +519,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>8069</DevelopmentServerPort>
+          <DevelopmentServerPort>42240</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:21401/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -87,10 +87,6 @@
     <Content Include="_Scripts.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FWS.Con\FWS.Con.csproj">
-      <Project>{8bf82114-ef73-47c3-a690-33caff637acd}</Project>
-      <Name>FWS.Con</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FWS.Dic\FWS.Dic.csproj">
       <Project>{6bd20946-2c2f-4a3a-b9e2-70c425b8b274}</Project>
       <Name>FWS.Dic</Name>

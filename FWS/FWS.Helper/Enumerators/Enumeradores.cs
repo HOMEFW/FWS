@@ -2,6 +2,17 @@
 {
     public static class Enumeradores
     {
+        public enum Ambiente
+        {
+            Local = 1,
+            Desenvolvimento = 2,
+            Homologação = 3,
+            QA = 4,
+            Producao = 5
+        }
+
+
+
         /// <summary>
         /// Usado na validação de documentos. Ex: CPF, RG, CNH
         /// </summary>
@@ -18,13 +29,5 @@
             SCA_SESSION_USUARIO = 1
         }
 
-        public enum Ambiente 
-        {
-            Local = 1,
-            Desenvolvimento = 2,
-            Homologação = 3,
-            QA = 4,
-            Producao = 5
-        }
     }
 }

@@ -1,0 +1,116 @@
+﻿@using FWS.MVC.Areas.Users.Models
+@using Microsoft.Owin.Security
+@model LoginViewModel
+
+@using (Html.BeginForm("Login", "Account", new {ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="login-box">
+                    <div id="login-box-holder">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <header id="login-header">
+                                    <div id="login-logo">
+                                        <img src="~/Content/Home/img/logo.png" alt="" />
+                                    </div>
+                                </header>
+                                <div id="login-box-inner">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email address" })
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div id="remember-me-wrapper">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <div class="checkbox-nice">
+                                                    @Html.CheckBoxFor(m => m.RememberMe, new {@checked="checked"})
+                                                    @Html.LabelFor(m => m.RememberMe)
+                                                </div>
+                                            </div>
+                                            @Html.ActionLink("Forgot password?", "ForgotPassword", null, new { @class = "col-xs-6", @id = "login-forget-link" })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <button type="submit" class="btn btn-success col-xs-12">Login</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <p class="social-text">Or login with</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        @{
+                                            var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+                                            if (loginProviders.Count() == 0)
+                                            {
+                                                <p class="social-text">
+                                                    There are no external authentication services configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                                                    for details on setting up this ASP.NET application to support logging in via external services.
+                                                </p>
+                                            }
+                                            else
+                                            {
+                                                foreach (AuthenticationDescription p in loginProviders)
+                                                {
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        @if (p.AuthenticationType.Equals(""))
+                                                        {
+                                                            <button type="submit" class="btn btn-primary col-xs-12 btn-facebook">
+                                                                <i class="fa fa-facebook"></i> facebook
+                                                            </button>
+                                                        }
+                                                        else if (p.AuthenticationType.Equals(""))
+                                                        {
+
+                                                            <button type="submit" class="btn btn-primary col-xs-12 btn-twitter">
+                                                                <i class="fa fa-twitter"></i> Twitter
+                                                            </button>
+
+                                                        }
+                                                        else if (p.AuthenticationType.Equals(""))
+                                                        {
+                                                            <button type="submit" class="btn btn-primary col-xs-12" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">
+                                                                <i class="fa fa-twitter"></i>@p.AuthenticationType
+                                                            </button>
+                                                        }
+                                                        else if (p.AuthenticationType.Equals(""))
+                                                        {
+                                                            <button type="submit" class="btn btn-primary col-xs-12" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">
+                                                                <i class="fa fa-twitter"></i>@p.AuthenticationType
+                                                            </button>
+                                                        }
+                                                    </div>
+                                                }
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="login-box-footer">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                Do not have an account?@Html.ActionLink("Register now", "Register")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

@@ -8,7 +8,7 @@ namespace FWS.Helper.Cryptography
 {
     public static class Criptografia
     {
-        private const string Chave = @"Quantum2014*";
+        private const string Chave = @"$|N98|*|A14|¨|F81|#|W77|@|C07|$";
 
         private static TripleDESCryptoServiceProvider _criptografiaTripleDes;
         public static TripleDESCryptoServiceProvider CriptografiaTripleDes

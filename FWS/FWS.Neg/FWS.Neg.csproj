@@ -71,18 +71,6 @@
     <Compile Include="Volcano\nLancamentoTipo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FWS.Dao\FWS.Dao.csproj">
-      <Project>{8a7c60ea-0e0a-4983-881e-2066d4a21d5b}</Project>
-      <Name>FWS.Dao</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FWS.Dic\FWS.Dic.csproj">
-      <Project>{6bd20946-2c2f-4a3a-b9e2-70c425b8b274}</Project>
-      <Name>FWS.Dic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FWS.Ent\FWS.Ent.csproj">
-      <Project>{49C52ECD-FD66-4343-869A-B4982B7F642A}</Project>
-      <Name>FWS.Ent</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FWS.Hlp\FWS.Hlp.csproj">
       <Project>{7a2e2ce5-0f46-487d-b254-b4b7d049c990}</Project>
       <Name>FWS.Hlp</Name>

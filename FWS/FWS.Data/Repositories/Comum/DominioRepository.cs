@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FWS.Domain.Entities.Comum;
 using FWS.Domain.Interfaces.Repositories.Comum;
 
@@ -8,7 +9,7 @@ namespace FWS.Data.Repositories.Comum
     {
         public IEnumerable<eDominio> GetByName(string dominio)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
