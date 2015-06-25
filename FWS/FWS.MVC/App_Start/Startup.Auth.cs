@@ -1,4 +1,5 @@
 ﻿using System;
+using FWS.Log;
 using FWS.MVC.Areas.Users.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -26,6 +27,9 @@ namespace FWS.MVC
             //cripto = Helper.Cryptography.Criptografia.Criptografar("fws_desenv");
             //cripto = Helper.Cryptography.Criptografia.Criptografar("fwscrew");
             //cripto = Helper.Cryptography.Criptografia.Criptografar("fwscrew");
+
+            Log.appLog.LogMe(erro.Info, null, this.GetType(), "Start Project");
+
 
             // Configure the db context, user manager and signin manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
